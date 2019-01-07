@@ -37,7 +37,9 @@ function total() {
 }
 
 function removeFromCart(item) {
-  // write your code here
+  var i = 0;
+  while (i < cart.length && cart[i].itemName)
+  return 'That item is not in your cart';
 }
 
 function placeOrder(cardNumber) {
