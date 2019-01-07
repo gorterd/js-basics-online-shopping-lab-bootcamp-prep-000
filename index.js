@@ -38,8 +38,10 @@ function total() {
 
 function removeFromCart(item) {
   var i = 0;
-  while (i < cart.length && cart[i].itemName)
-  return 'That item is not in your cart';
+  while (i < cart.length && cart[i].itemName !== item){
+    i++;
+  }
+  return (i === cart.length) ? 'That item is not in your cart' : cart.splice()
 }
 
 function placeOrder(cardNumber) {
