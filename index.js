@@ -19,7 +19,7 @@ function viewCart() {
   var str = 'In your cart, you have';
   var buffer = '';
   for (let i=0; i < cart.length; i++){
-    buffer = (i )
+    if (i < cart.length-1 && cart.length > 2) buffer
     str += `${cart[i].itemName} at $${cart[i].itemPrice}${
   }
 }
