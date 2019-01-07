@@ -17,11 +17,14 @@ function addToCart(item) {
 
 function viewCart() {
   var str = 'In your cart, you have';
-  var buffer = '';
   for (let i=0; i < cart.length; i++){
-    if (i < cart.length-1 && cart.length > 2) buffer
-    str += `${cart[i].itemName} at $${cart[i].itemPrice}${
+    var buffer = '';
+    if (i < cart.length-1 && cart.length > 2) buffer += ',';
+    if (i === cart.length-2) buffer += ' and';
+    if (i === cart.length-1) buffer = '.';
+    str += `${cart[i].itemName} at $${cart[i].itemPrice}${buffer}`;
   }
+  return str
 }
 
 function total() {
