@@ -20,8 +20,8 @@ function viewCart() {
   var str = 'In your cart, you have ';
   for (let i=0; i < cart.length; i++){
     var buffer = '';
-    if (i < cart.length-1) buffer += ',';
-    if (i === cart.length-2) buffer += ' and';
+    if (i < cart.length-1) buffer += ', ';
+    if (i === cart.length-2) buffer += 'and ';
     if (i === cart.length-1) buffer = '.';
     str += `${cart[i].itemName} at $${cart[i].itemPrice}${buffer}`;
   }
